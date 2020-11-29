@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Page 6 pin</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="utf-8">
+<link href = "page6-login.css" rel="stylesheet">
+<link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+<h1>Pin Login </h1>
+
+<div class= "container">
+<div class="pin-login" id="mainPinLogin">
+    <input type="password" readonly class ="pin-login__text">
+    <div class ="pin-login__numpad">
+    
+    </div>
+
+</div>
+</div>
+
+<script src="pin-login.js"></script>
+<script>
+    new PinLogin(
+        {
+            el:document.getElementById("mainPinLogin"),
+            loginEndpoint: "page6-login.php",
+            redirectTo:"dashboard.html",
+            maxNumbers: 5 /*MAX 4 number for pin*/
+        }
+    );
+</script>
+
+</body>
+
+</html>
