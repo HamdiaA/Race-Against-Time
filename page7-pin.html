@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> Page 6 pin</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="utf-8">
+<link href = "page7-login.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        Enter the Code and press = to submit
+        </div>
+
+
+<div class= "container">
+<div class="pin-login" id="mainPinLogin">
+    <input type="password" readonly class ="pin-login__text">
+    <div class ="pin-login__numpad">
+    
+    </div>
+    <div id ="back" class="backButton">
+        <a href="page7-hallway.html" class="button">Go back!</a>
+    </div>
+</div>
+
+
+
+
+<script src="pin-test.js"></script>
+<script>
+    new PinLogin(
+        {
+            el:document.getElementById("mainPinLogin"),
+            loginEndpoint: "page7-login.php",
+            redirectTo:"dashboard.html",  /*CHANGE THIS PAGE*/
+            maxNumbers: 3 /*MAX 3 number for pin*/
+        }
+    );
+
+</script>
+
+
+<audio autoplay loop>
+    <source src="page7.mp3">
+</audio>
+
+</body>
+
+</html>

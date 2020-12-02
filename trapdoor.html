@@ -24,10 +24,13 @@ function validateForm()
  
 <body>
 
-
+    <audio autoplay loop>
+        <source src="battleMusic.mp3">
+    </audio>
+    
 <div class="alert">
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-        You're <em>TRAPPED ! </em>Answer this question to escape!.
+        You're <em>TRAPPED ! </em>Answer this question to escape!
         </div>
 
 <div id="wrapper">
@@ -51,7 +54,6 @@ function validateForm()
 </form>
 </div>
 
-</div>
 
 
 <div id ="back" class="backButton">
@@ -59,8 +61,10 @@ function validateForm()
 <script>
 const back = document.getElementById('back');
 back.style.display = 'none'; 
-setTimeout(()=> {back.style.display= 'block';},500000);
+setTimeout(()=> {back.style.display= 'block';},50000); // change the timing for longer
 </script>       
+
+</div>
 
 </div>
 

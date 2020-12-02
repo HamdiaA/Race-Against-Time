@@ -1,0 +1,263 @@
+
+#wrapper
+{
+
+ 
+    width:100%;
+}
+
+
+
+
+html{
+    background: url(images/page6-edit.png) no-repeat center center fixed;
+    background-size:cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  
+
+}
+body{
+    overflow: hidden;
+  margin:auto;
+
+}
+
+.arrow
+{
+  max-width:20%;
+  transform:rotate(120deg);
+  justify-content:center
+}
+.arrowbox
+{
+    max-width:30%;
+    position: absolute;
+    right:400px;
+    top:350px;
+}
+.poster
+{   display:inline-block;
+    max-width: 10%;
+    margin-left: 200px;
+    padding-top: 190px;
+    transition: transform .2s;
+
+}
+.poster:hover
+{
+    transform:scale(3);
+    
+}
+
+
+.sanitizer
+{
+    position:absolute;
+    max-width: 5%;
+    margin-left: 600px;
+    margin-top: 100px;
+    transition: all 0.3s ease-in-out 0s;
+}
+.sanitizer:hover
+{
+    transform:scale(5);
+    
+}
+
+
+.alert {
+  padding: 20px;
+  background-color: #023047;
+  color: white;
+  justify-content:center;
+  font-family: 'Xanh Mono', monospace;
+  text-align:center;
+
+  
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+span
+{
+text-align:center;
+}
+
+
+
+
+.default
+{
+    background-repeat: no-repeat;
+    position:absolute;
+    background-position: bottom left;
+    background-size:contain;
+}
+
+.box {
+    width: 40%;
+    justify-content:top left;
+    padding: 35px;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+  }
+  
+  .button {
+    font-size: 1em;
+    padding: 10px;
+    color: #fff;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    background-color:#8ECAE6;
+    font-family: 'Xanh Mono', monospace;
+  }
+  .button:hover {
+    background: #126782;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 1s ease-in-out;
+    font-family: 'Xanh Mono', monospace;
+    
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    /*font-family: Tahoma, Arial, sans-serif;*/
+    font-family: 'Homemade Apple', cursive;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #8ECAE6;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+  
+  @media screen and (max-width: 700px){
+    .box{
+  
+    margin-left:-60px;
+    padding-bottom:300px;
+    padding: 35px;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+    }
+
+    .popup{
+      width: 70%;
+    }
+    html{
+        width:70%;
+  
+    }
+
+    .alert-box{
+      width:80%;
+   margin-left:100px;  
+    }
+
+   .arrow
+   {
+
+     transform:rotate(120deg);
+     justify-content:left;
+     margin-left: 150px;
+     margin-top:40px;
+   }
+   .arrowbox
+   {
+       max-width:30%;
+       
+     
+   }
+
+   .poster {
+     min-width:30%;
+     position: absolute;
+     
+    padding-top:160px;
+   }
+   .poster:hover
+   {
+       transform:scale(2);
+  
+   }
+
+   .sanitizer
+   {
+       position:absolute;
+       max-width: 10%;
+       margin-left: 20px;
+       margin-top: 440px;
+       transition: all 0.3s ease-in-out 0s;
+   }
+   .sanitizer:hover
+   {
+       transform:scale(6);
+       
+   }
+
+
+
+
+    
+
+  }
+
+
+  
+
+
+  
