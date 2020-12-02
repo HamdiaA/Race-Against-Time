@@ -1,0 +1,60 @@
+/*
+#wrapper
+{
+    margin-left:auto;
+    margin-right:auto;
+    width:960px;
+}
+
+*/
+
+
+html{
+    background: url(images/page6-edit.png) no-repeat center center fixed;
+    background-size:cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+.poster
+{   display:inline-block;
+    max-width: 10%;
+    margin-left: 450px;
+    padding-top: 300px;
+    transition: transform .2s;
+
+}
+.poster:hover
+{
+    transform:scale(2);
+    
+}
+
+
+.sanitizer
+{
+    position:absolute;
+    max-width: 5%;
+    margin-left: 900px;
+    margin-bottom: 800px;
+    transition: all 0.3s ease-in-out 0s;
+}
+.sanitizer:hover
+{
+    transform:scale(5);
+    
+}
+
+
+.default
+{
+    background-repeat: no-repeat;
+    position:absolute;
+    background-position: bottom left;
+    background-size:contain;
+}
+
+

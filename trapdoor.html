@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> trap door</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="utf-8">
+<link href = "traproom.css" rel="stylesheet">   
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap" rel="stylesheet">
+<script type ="text/javascript">
+function validateForm()
+{
+    var x = document.forms["myForm"]["answer"].value;
+    if (x == "59 59" || x == "59 min 59 sec"||x== "5959" ||x =="59 minute 59 seconds")
+    {
+        return true;
+    }
+    alert ("Incorrect answer");
+    return false;
+}
+</script>
+
+</head>
+ 
+<body>
+
+    <audio autoplay loop>
+        <source src="battleMusic.mp3">
+    </audio>
+    
+<div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        You're <em>TRAPPED ! </em>Answer this question to escape!
+        </div>
+
+<div id="wrapper">
+
+<div class="riddle">
+    <p>Once put in an petri dish, the corona virus starts duplicating, each <strong>second</strong> the virus <strong>doubles</strong> himself,
+
+        <br> Which mean after 1 second there will be 2 viruses, then 4, then 8 and so on...
+
+        <br>After <strong>one hour</strong> the petri dish was <em>perfectly full</em>.
+        
+        <br>When was the plate exactly <strong>half full</strong>?</p>
+    </div>
+
+<div class="answerBox">
+<form name="myForm" action ="dashboard.html" onsubmit="return validateForm()" method="post"> <!-- CHANGE PAGE DESTINATION-->
+    <input type="text" name="answer" id="answer" placeholder="answer"> <br/> &nbsp;
+    <div class="submitBox">
+    <input class="button" type="submit" value="submit">
+    </div>
+</form>
+</div>
+
+
+
+<div id ="back" class="backButton">
+<a href="page10.html" class="button">Go back!</a>
+<script>
+const back = document.getElementById('back');
+back.style.display = 'none'; 
+setTimeout(()=> {back.style.display= 'block';},50000); // change the timing for longer
+</script>       
+
+</div>
+
+</div>
+
+
+</body>
+
+</html>

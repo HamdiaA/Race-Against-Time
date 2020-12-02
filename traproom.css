@@ -1,0 +1,146 @@
+html
+{
+background: url(images/traproom.jpeg)no-repeat center center fixed;
+background-size:cover;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+overflow:hidden;
+
+}
+
+
+
+
+.backButton
+{
+    width:80px;
+    background: #8ECAE6;
+    border-radius:25px;
+    padding:5px;
+    text-align:center;
+    justify-content:left;
+    font-family: 'Xanh Mono', monospace;
+
+}
+
+
+.backButton:hover{
+    color:white;
+    background: rgb(32, 49, 56);
+
+}
+
+a{
+    width:100px;
+    text-decoration:none;
+    color:rgb(5, 46, 65);
+}
+
+a:hover
+{
+
+    color:white;
+    
+    
+}
+#wrapper
+{
+    justify-content:center;
+    margin:auto;
+    width:480px;
+    height:900px;
+}
+body{
+    justify-content:center;
+    margin:auto;
+}
+.riddle{
+    justify-content:center;
+    margin:auto;
+    background: #58B4D1;
+    border-radius:25px;
+    width: 410px;
+    padding:20px;
+    margin-top:200px;
+    box-shadow: 15px 15px 10px rgb(0,0, 0, 0.5);
+}
+p{
+    font-family: 'Xanh Mono', monospace;
+    line-height: 30px;
+    color:#023047;
+}
+br{
+    line-height: 80px;
+}
+strong{
+    font-weight:bold;
+    font: 40px;
+    color:black;
+    text-shadow: 1px 1px #023047;
+    
+}
+
+.answerBox{
+    justify-content:center;
+    margin:auto;  
+    
+  
+}
+
+#button
+{
+    display:block;
+    text-align:center;
+    margin: auto;
+    padding-top:20px;
+}
+
+input [type=text]
+{
+box-sizing:border-box;
+}
+
+
+input [type=submit]
+{
+cursor:pointer;
+padding:10px;
+}
+
+form{
+    justify-content:center;
+    margin:auto 0;
+    width:410px;
+    display:block;
+    text-align:center;
+    padding:20px;
+  
+
+}
+.alert {
+    padding: 20px;
+    background-color: #023047;
+    color: white;
+    text-align:center;
+    font-family: 'Xanh Mono', monospace;
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
+  span
+  {
+text-align:center;
+  }

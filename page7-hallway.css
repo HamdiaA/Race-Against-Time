@@ -1,0 +1,226 @@
+
+#wrapper
+{
+
+ 
+    width:100%px;
+    display:inline-block;
+}
+
+
+
+
+html{
+    background: url(images/officeDoor.png) no-repeat center center fixed;
+    background-size:cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width:100%
+
+
+}
+body{
+    overflow: hidden;
+    margin:auto;
+
+
+}
+
+.arrow
+{
+   
+  max-width:20%;
+  transform:rotate(20deg);
+
+}
+.arrowbox
+{
+    max-width:20%;
+    position: absolute;
+    left:400px;
+    bottom:480px;
+    
+    
+}
+
+
+
+
+
+
+.default
+{
+    background-repeat: no-repeat;
+    position:absolute;
+    background-position: bottom left;
+    background-size:contain;
+}
+
+.box {
+    width: 40%;
+    margin: 0 auto;
+    padding: 35px;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+    position:absolute;
+    align-items:left;
+    left:-100px;
+    bottom:20px;
+ 
+  }
+  
+  .button {
+    font-size: 1em;
+    padding: 10px;
+    color: #fff;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    background-color: #126782;
+    font-family: 'Xanh Mono', monospace;
+  }
+  .button:hover {
+    background: #8ECAE6;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 1s ease-in-out;
+    font-family: 'Xanh Mono', monospace;
+  
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: 'Homemade Apple', cursive;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #8ECAE6;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+
+  .alert {
+    padding: 20px;
+    background-color: #023047;
+    color: white;
+    justify-content:center;
+    font-family: 'Xanh Mono', monospace;
+    text-align:center;
+  
+    
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
+  span
+  {
+  text-align:center;
+  }
+
+
+
+
+
+
+
+  
+  @media screen and (max-width: 800px){
+      /*FOR MOBILE PHONES*/
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+    body{
+        width:70%;
+    }
+    html{
+        width:70%;
+    }
+
+
+  .alert-box{
+    width:80%;
+  margin-left:150px;  
+  }
+
+  .arrow
+  { 
+    max-width:40%;
+  
+  }
+  .arrowbox
+  {
+      max-width:20%;
+      position: inline-block;
+      margin-left:-170px;
+      margin-top:70px;
+  }
+
+  .box {
+  
+    margin: 0 auto;
+    padding: 35px;
+
+    left: -100px;
+    bottom:20px;
+ 
+  }
+
+
+  }
+
+
+  
+  

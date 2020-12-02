@@ -1,0 +1,207 @@
+html
+{
+background: url(images/locker.jpg)no-repeat center center fixed;
+background-size:cover;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+
+
+}
+body{
+  
+  overflow:hidden;
+  width:100%;
+  margin:auto;
+
+}
+
+
+
+.alert {
+    padding: 20px;
+    background-color: #023047;
+    color: white;
+    justify-content:center;
+    font-family: 'Xanh Mono', monospace;
+    text-align:center;
+    
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
+  span
+  {
+text-align:center;
+  }
+
+
+#button
+{
+    display:block;
+    text-align:center;
+    margin: auto;
+    padding-top:20px;
+    font-family: 'Xanh Mono', monospace;
+}
+.backButton
+{
+    width:80px;
+    background: #8ECAE6;
+    border-radius:25px;
+    padding:5px;
+    text-align:center;
+    justify-content:center;
+    
+
+}
+
+.backButton:hover{
+    color:white;
+    background: rgb(32, 49, 56);
+
+}
+
+a{
+    width:100px;
+    text-decoration:none;
+    color:rgb(5, 46, 65);
+}
+
+a:hover
+{
+
+    color:white;
+    
+    
+}
+
+
+
+
+#body
+{
+background-image:url('images/ppe/body.png');
+height: 500px;
+width:500px;
+z-index: 1;
+margin-top: 150px;
+}
+
+#gloves
+{
+background-image:url('images/ppe/gloves.png');
+height: 500px;
+width:520px;
+z-index: 5;
+
+}
+
+#goggle
+{
+background-image:url('images/ppe/goggle.png');
+height: 500px;
+width:500px;
+z-index: 6;
+right:20px;
+}
+
+
+#mask
+{
+background-image:url('images/ppe/mask.png');
+height: 500px;
+width:500px;
+z-index: 5;
+top:30px;
+}
+
+#hat
+{
+background-image:url('images/ppe/hat.png');
+height: 500px;
+width:500px;
+z-index: 4;
+top: 300px;
+}
+
+#shoe
+{
+background-image:url('images/ppe/shoe.png');
+height: 500px;
+width:500px;
+z-index: 3;
+}
+
+
+#gown
+{
+background-image:url('images/ppe/gown.png');
+height: 500px;
+width:500px;
+z-index: 2;
+left:200px;
+}
+/* MODIFY TO PPE GEAR*/
+.default
+{
+background-repeat: no-repeat;
+position:absolute;
+background-position: bottom left;
+background-size:contain;
+}
+
+.container {
+    display: flex;
+    align-items: left;
+    justify-content: space-around;
+    min-height: 100vh;   
+}
+
+@media screen and (max-width: 700px){
+  body{
+    width:70%
+  }
+  .box{
+
+  margin-left:-60px;
+  padding-bottom:300px;
+  padding: 35px;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+  }
+
+  .popup{
+    width: 70%;
+  }
+body{
+  width:70%;
+}
+
+  .alert-box{
+    width:90%;
+ 
+  }
+
+  .container{
+    align-items:center;
+    margin-bottom:30px;
+  }
+
+
+  
+
+}
