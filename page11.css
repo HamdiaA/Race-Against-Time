@@ -1,0 +1,27 @@
+html {
+    background: url(images/trnava-university-lab.jpg)  no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.briefcase{
+    padding-top: 460px;
+    margin-left: 400px;
+    width:25%
+}
+
+.briefcase:hover {
+    transform:scale(3.25);
+    /*-webkit-box-shadow: 0px 0px 3px 5px #f2e1f2;
+    -moz-box-shadow: 0px 0px 3px 5px #f2e1f2;
+    box-shadow: 0px 0px 3px 5px #f2e1f2; 
+}
+
+.briefcase.open{
+    padding-top: 460px;
+    margin-left: 400px;
+    width:25%*/
+}
