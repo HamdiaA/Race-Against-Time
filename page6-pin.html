@@ -6,11 +6,18 @@
 <meta charset="utf-8">
 <link href = "page6-login.css" rel="stylesheet">
 <link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-<h1>Pin Login </h1>
+
+    <div class="alert">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+        Enter the Code and press = to submit
+        </div>
+
 
 <div class= "container">
 <div class="pin-login" id="mainPinLogin">
@@ -18,21 +25,31 @@
     <div class ="pin-login__numpad">
     
     </div>
-
+    <div id ="back" class="backButton">
+        <a href="page6-hallway.html" class="button">Go back!</a>
+    </div>
 </div>
-</div>
 
-<script src="pin-login.js"></script>
+
+
+
+
+<script src="pin-test.js"></script>
 <script>
     new PinLogin(
         {
             el:document.getElementById("mainPinLogin"),
             loginEndpoint: "page6-login.php",
-            redirectTo:"dashboard.html",
-            maxNumbers: 5 /*MAX 4 number for pin*/
+            redirectTo:"page6-changeroom.html",
+            maxNumbers: 5 /*MAX 5 number for pin*/
         }
     );
 </script>
+
+<audio autoplay loop>
+    <source src="HospitalBackground.mp3">
+</audio>
+
 
 </body>
 

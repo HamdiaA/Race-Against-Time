@@ -5,9 +5,11 @@ background-size:cover;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
-
+overflow:hidden;
 
 }
+
+
 
 
 .backButton
@@ -17,13 +19,11 @@ background-size:cover;
     border-radius:25px;
     padding:5px;
     text-align:center;
-    margin-top:100px;
-    justify-content:center;
-    
-
-  
+    justify-content:left;
+    font-family: 'Xanh Mono', monospace;
 
 }
+
 
 .backButton:hover{
     color:white;
@@ -49,6 +49,7 @@ a:hover
     justify-content:center;
     margin:auto;
     width:480px;
+    height:900px;
 }
 body{
     justify-content:center;
@@ -61,7 +62,7 @@ body{
     border-radius:25px;
     width: 410px;
     padding:20px;
-    margin-top:300px;
+    margin-top:200px;
     box-shadow: 15px 15px 10px rgb(0,0, 0, 0.5);
 }
 p{
@@ -121,6 +122,8 @@ form{
     padding: 20px;
     background-color: #023047;
     color: white;
+    text-align:center;
+    font-family: 'Xanh Mono', monospace;
   }
   
   .closebtn {

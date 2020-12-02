@@ -5,12 +5,13 @@ background-size:cover;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
-
+margin:auto;
 
 }
 body{
     justify-content:center;
     margin:auto;
+    overflow: hidden;
 }
 
 .container
@@ -19,7 +20,7 @@ body{
     margin:auto;
     justify-content:center;
     padding: 100px;
-    margin-top: 200px;
+    margin-top: 80px;
     align-items: center;
 }
 .pin-login
@@ -92,6 +93,7 @@ body{
     justify-content: center;
     font-weight: bold; 
     cursor:pointer;
+    margin-left:20px;
 
 }
 
@@ -101,3 +103,95 @@ body{
 background: rgba(0,0,0,0.25);
 }
 
+#back
+{
+    width:100px;
+    justify-content:left;
+    margin:auto;
+    
+}
+.backButton
+{
+    width:80px;
+    background: #219EBC;
+    border-radius:25px;
+    padding:5px;
+    text-align:center;
+    margin-top:100px;
+    justify-content:center;
+    font-family: 'Xanh Mono', monospace;
+    
+
+
+}
+
+.backButton:hover{
+    color:white;
+    background: rgb(32, 49, 56);
+
+}
+
+a{
+    width:100px;
+    text-decoration:none;
+    color:rgb(5, 46, 65);
+}
+
+a:hover
+{
+
+    color:white;
+    
+    
+}
+
+
+.alert {
+    padding: 20px;
+    background-color: #023047;
+    color: white;
+    text-align:center;
+    font-family: 'Xanh Mono', monospace;
+  }
+  
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .closebtn:hover {
+    color: black;
+  }
+  span
+  {
+text-align:center;
+  }
+
+  @media screen and (max-width: 700px){
+    
+    html{
+        width:80%;
+    }
+
+
+
+    .container
+    {   display:flex;
+        width:300px;
+        margin:auto;
+        justify-content:center;
+        padding: 100px;
+        margin-top: 80px;
+        align-items: center;
+        padding-left:55px;
+    }
+   
+    
+
+  }
