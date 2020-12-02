@@ -1,0 +1,58 @@
+body{
+	background-image: url('hands.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+img:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+#image{
+	/*height: 500px;
+  	width: 500px;*/
+  	display: block;
+  	margin-left: 400px;
+  	margin-right: auto;
+  	width: 50%;
+  	margin-bottom: auto;
+  	margin-top: auto;
+}
+#nums{
+	display: block;
+  	margin-left: 650px;
+  	margin-right: auto;
+  	margin-bottom: auto;
+  	margin-top: auto;
+  	font-family: 'Xanh Mono' 
+	font-size: 100px;
+}
+
+input{
+	text-align: center;
+	background-color: #126782;
+	
+}
+#player{
+	position: absolute;
+	display: block;
+  	height: 100%;
+  	width: 100%;
+}

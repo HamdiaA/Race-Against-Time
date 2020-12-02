@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page 4</title>
+	<link rel="stylesheet" type="text/css" href="page4.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Xanh%20Mono">
+</head>
+<body>
+	<p>Page 4</p>
+	<!--<div id = "video">
+		<video autoplay="autoplay" >
+			<source src="https://www.youtube.com/watch?v=3PmVJQUCm4E&ab_channel=WorldHealthOrganization%28WHO%29">
+		</video>
+	</div> !-->
+<!-- 	<div id="player"></div>
+	<script type="text/javascript">
+		var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+ 
+var player;
+ 
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+        height: '219',
+        width: '386',
+        playerVars: { 'rel':0, 'autoplay': 1, 'controls': 0 },
+        videoId: 'IisgnbMfKvI',
+        events: {
+            'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+        }
+    });
+}
+ 
+function onPlayerReady(event) {
+    //Uncomment to autoplay function
+    event.target.playVideo();
+}
+ 
+var done = false;
+ 
+function onPlayerStateChange(event) {        
+    if(event.data === YT.PlayerState.ENDED) {          
+        stopVideo();
+    }
+}
+ 
+function stopVideo() {
+    player.stopVideo();
+    document.getElementById("player").style.display = "none";
+    document.getElementsByClassName('fluid-width-video-wrapper').style.padding = "0";
+}
+
+
+
+
+
+
+
+-->
+
+
+	</script> 
+	<div>
+		<div id="player"></div>
+		<img src="hands2.jpg" id="image" onclick="buttonclick()">
+		<br>
+		<input type="text" value="0" id = "nums">
+	</div>
+
+	<script type="text/javascript">
+		var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+ 
+var player;
+ 
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+        height: '219',
+        width: '386',
+        playerVars: { 'rel':0, 'autoplay': 1, 'controls': 0 },
+        videoId: 'IisgnbMfKvI',
+        events: {
+            'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+        }
+    });
+}
+ 
+function onPlayerReady(event) {
+    //Uncomment to autoplay function
+    event.target.playVideo();
+}
+ 
+var done = false;
+ 
+function onPlayerStateChange(event) {        
+    if(event.data === YT.PlayerState.ENDED) {          
+        stopVideo();
+    }
+}
+ 
+function stopVideo() {
+    player.stopVideo();
+    document.getElementById("player").style.display = "none";
+    document.getElementsByClassName('fluid-width-video-wrapper').style.padding = "0";
+}
+
+
+
+		function buttonclick() {
+ 			document.getElementById("nums").value++;
+ 			if (document.getElementById("nums").value == 41){
+ 				location.href = "page5.html";
+ 			}
+		}
+
+	</script>
+
+</body>
+</html>
