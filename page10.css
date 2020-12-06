@@ -1,3 +1,6 @@
+/* CODE FOR ALERT BOX
+https://www.w3schools.com/howto/howto_js_alert.asp
+*/
 
 #wrapper{
     width:100%;
@@ -54,7 +57,7 @@ margin:auto;
     width:40%;
 }
 
-
+/*ALERT BOX ON TOP OF THE PAGE*/
 .alert {
     padding: 20px;
     background-color: #023047;
@@ -88,7 +91,7 @@ text-align:center;
 
 
 
-
+/*MOBILE DEVICES*/
 @media screen and (max-width: 700px){
     
     html{

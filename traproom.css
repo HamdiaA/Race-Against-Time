@@ -1,3 +1,7 @@
+/* CODE FOR ALERT BOX
+https://www.w3schools.com/howto/howto_js_alert.asp
+*/
+
 html
 {
 background: url(images/traproom.jpeg)no-repeat center center fixed;
@@ -11,7 +15,7 @@ overflow:hidden;
 
 
 
-
+/*BACK BUTTON*/
 .backButton
 {
     width:80px;
@@ -55,6 +59,7 @@ body{
     justify-content:center;
     margin:auto;
 }
+/*RIDDLES*/
 .riddle{
     justify-content:center;
     margin:auto;
@@ -84,8 +89,6 @@ strong{
 .answerBox{
     justify-content:center;
     margin:auto;  
-    
-  
 }
 
 #button
@@ -118,6 +121,8 @@ form{
   
 
 }
+
+/*ALERT BOX ON TOP OF THE PAGE*/
 .alert {
     padding: 20px;
     background-color: #023047;

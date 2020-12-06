@@ -1,3 +1,12 @@
+
+<!-- CODE FOR FORM VALIDATION:
+    https://www.w3schools.com/js/js_validation.asp
+
+    CODE FOR LOADING DIV AT CERTAIN TIME
+    https://www.w3schools.com/jsref/event_onload.asp
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,14 +16,17 @@
 <link href = "traproom.css" rel="stylesheet">   
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap" rel="stylesheet">
+
+<!--JAVASCRIPT TO VALDIATE FORM-->
 <script type ="text/javascript">
 function validateForm()
 {
-    var x = document.forms["myForm"]["answer"].value;
+    var x = document.forms["myForm"]["answer"].value; //get answer value from form
+    //if the answers are any of these 
     if (x == "59 59" || x == "59 min 59 sec"||x== "5959" ||x =="59 minute 59 seconds")
     {
         return true;
-    }
+    } //if answers are not those above, make an alert
     alert ("Incorrect answer");
     return false;
 }
@@ -23,18 +35,19 @@ function validateForm()
 </head>
  
 <body>
-
+    <!--MUSIC-->
     <audio autoplay loop>
         <source src="battleMusic.mp3">
     </audio>
     
+<!--ALERT BOX ON TOP OF TEH PAGE-->
 <div class="alert">
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
         You're <em>TRAPPED ! </em>Answer this question to escape!
         </div>
 
 <div id="wrapper">
-
+<!--RIDDLE-->
 <div class="riddle">
     <p>Once put in an petri dish, the corona virus starts duplicating, each <strong>second</strong> the virus <strong>doubles</strong> himself,
 
@@ -44,9 +57,10 @@ function validateForm()
         
         <br>When was the plate exactly <strong>half full</strong>?</p>
     </div>
-
+<!--FORM FOR ACCEPTING VALUE-->
 <div class="answerBox">
-<form name="myForm" action ="dashboard.html" onsubmit="return validateForm()" method="post"> <!-- CHANGE PAGE DESTINATION-->
+    <!--REDIRECTS TO THIS PAGE IF ANSWER IS CORRECT-->
+<form name="myForm" action ="https://www.cs.ryerson.ca/~habdulha/CPS530/Project/page11.html" onsubmit="return validateForm()" method="post"> <!-- CHANGE PAGE DESTINATION-->
     <input type="text" name="answer" id="answer" placeholder="answer"> <br/> &nbsp;
     <div class="submitBox">
     <input class="button" type="submit" value="submit">
@@ -55,13 +69,15 @@ function validateForm()
 </div>
 
 
-
+<!--BACK BUTTON-->
 <div id ="back" class="backButton">
 <a href="page10.html" class="button">Go back!</a>
+
+<!--JAVASCRIPT TO DISPLAY BACK BUTTON AT A CERTAIN TIME-->
 <script>
 const back = document.getElementById('back');
 back.style.display = 'none'; 
-setTimeout(()=> {back.style.display= 'block';},50000); // change the timing for longer
+setTimeout(()=> {back.style.display= 'block';},5000); // change the timing for longer -50000 = 5 min
 </script>       
 
 </div>
