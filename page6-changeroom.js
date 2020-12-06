@@ -1,3 +1,7 @@
+//THIS CODE WAS TAKEN AND EDITED FROM LAB 7 
+//LAB 7 WAS MADE BASED UPON ARMAN'S TUTORIAL
+
+// GETS PPE IMG ELEMENTS
 $('document').ready(function()
 {
     drag($("#gloves"));
@@ -6,7 +10,7 @@ $('document').ready(function()
     drag($("#mask"));
     drag($("#shoe"));
     drag($("#gown"));
- // modify to PPE  gear
+
    
 }); 
 selectedElement=null;
@@ -43,6 +47,8 @@ function removeHandlers()
     $(document).unbind("mousemove");
 }
 
+
+//DRAG ELEMENT WITH THIS FUNCTION
 function drag(element)
 {
     var deltaX =0,deltaY=0, initialX=0,initialY=0;

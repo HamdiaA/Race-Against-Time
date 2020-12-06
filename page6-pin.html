@@ -5,14 +5,13 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta charset="utf-8">
 <link href = "page6-login.css" rel="stylesheet">
-<link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-
+<!-- ALERT MESSAGE (TOP OF PAGE)-->
     <div class="alert">
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
         Enter the Code and press = to submit
@@ -20,11 +19,15 @@
 
 
 <div class= "container">
+    <!--TOP SECTION INPUT -->
 <div class="pin-login" id="mainPinLogin">
-    <input type="password" readonly class ="pin-login__text">
+    
+    <input type="password" readonly class ="pin-login__text"> 
     <div class ="pin-login__numpad">
     
     </div>
+
+    <!-- BACK BUTTON FOR PREVIOUS PAGE-->
     <div id ="back" class="backButton">
         <a href="page6-hallway.html" class="button">Go back!</a>
     </div>
@@ -33,19 +36,21 @@
 
 
 
-
+<!--LINK JAVASCRIPT FOR VALIDATIONS-->
 <script src="pin-test.js"></script>
 <script>
     new PinLogin(
         {
             el:document.getElementById("mainPinLogin"),
-            loginEndpoint: "page6-login.php",
-            redirectTo:"page6-changeroom.html",
+            loginEndpoint: "page6-login.php", // VALIDATION FOR PIN CODE
+            redirectTo:"page6-changeroom.html", // REDIRECTS TO THIS PAGE IF PIN IS VALID
             maxNumbers: 5 /*MAX 5 number for pin*/
         }
     );
 </script>
 
+
+<!--AUDIO-->
 <audio autoplay loop>
     <source src="HospitalBackground.mp3">
 </audio>

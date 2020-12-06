@@ -17,7 +17,7 @@ body{
 }
 
 
-
+/*ALERT BOX */
 .alert {
     padding: 20px;
     background-color: #023047;
@@ -47,7 +47,7 @@ body{
 text-align:center;
   }
 
-
+/*BACK BUTTON*/
 #button
 {
     display:block;
@@ -89,7 +89,7 @@ a:hover
 }
 
 
-
+/*PPE DRAG COMPONENTS*/
 
 #body
 {
@@ -97,7 +97,7 @@ background-image:url('images/ppe/body.png');
 height: 500px;
 width:500px;
 z-index: 1;
-margin-top: 150px;
+margin:auto;
 }
 
 #gloves
@@ -154,12 +154,12 @@ width:500px;
 z-index: 2;
 left:200px;
 }
-/* MODIFY TO PPE GEAR*/
+/*  PPE GEAR  IMG DEFAULT */
 .default
 {
 background-repeat: no-repeat;
 position:absolute;
-background-position: bottom left;
+
 background-size:contain;
 }
 
@@ -168,6 +168,7 @@ background-size:contain;
     align-items: left;
     justify-content: space-around;
     min-height: 100vh;   
+    margin-left:60%;
 }
 
 @media screen and (max-width: 700px){
@@ -187,10 +188,10 @@ background-size:contain;
   .popup{
     width: 70%;
   }
-body{
-  width:70%;
-}
 
+#body{
+  bottom:40px;
+}
   .alert-box{
     width:90%;
  

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title> Page 6 pin</title>
+<title> Page 7 pin</title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta charset="utf-8">
 <link href = "page7-login.css" rel="stylesheet">
@@ -12,6 +12,7 @@
 </head>
 
 <body>
+<!-- ALERT MESSAGE (TOP OF PAGE)-->
     <div class="alert">
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
         Enter the Code and press = to submit
@@ -19,11 +20,14 @@
 
 
 <div class= "container">
+<!--TOP SECTION INPUT -->
 <div class="pin-login" id="mainPinLogin">
+    <!-- so that user cannot input their own keys-->
     <input type="password" readonly class ="pin-login__text">
     <div class ="pin-login__numpad">
-    
     </div>
+    
+      <!-- BACK BUTTON FOR PREVIOUS PAGE-->
     <div id ="back" class="backButton">
         <a href="page7-hallway.html" class="button">Go back!</a>
     </div>
@@ -31,21 +35,22 @@
 
 
 
-
+<!--LINK JAVASCRIPT FOR VALIDATIONS-->
 <script src="pin-test.js"></script>
 <script>
     new PinLogin(
         {
             el:document.getElementById("mainPinLogin"),
-            loginEndpoint: "page7-login.php",
-            redirectTo:"dashboard.html",  /*CHANGE THIS PAGE*/
+            loginEndpoint: "page7-login.php",// VALIDATION FOR PIN CODE
+            // REDIRECTS TO THIS PAGE IF PIN IS VALID
+            redirectTo:"page10.html",  /*CHANGE THIS PAGE*/
             maxNumbers: 3 /*MAX 3 number for pin*/
         }
     );
 
 </script>
 
-
+<!--AUDIO-->
 <audio autoplay loop>
     <source src="page7.mp3">
 </audio>
