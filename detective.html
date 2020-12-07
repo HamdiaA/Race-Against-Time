@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Detective Race </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="detstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+</head>
+<body>
+  <div id="timer"></div>
+
+<!--HINT BOX ELEMENTS-->
+<div class="box">
+	<a class="button" href="#popup0">Hint</a>
+</div>
+<!--POPUP BOX WHEN CLICK ON HINT BUTTON-->
+
+<div id="popup0" class="overlay">
+	<div class="popup">
+		<h2>Recovery Room</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			You are hiding in the recovery room.
+			Everything seems fine until you realize 3 handcuffed hospital staff.<br>
+			You are trying to ask them about the supply room to get the only mask.<br>
+			However, they are captured here for a positive diagnosis to Covid.<br>
+			They all are asking for help, and you were informed that one of them is Covid-free.<br>
+			Single click to eliminate the positive staff. <br>
+			Double click on the staff to read the clue card. <br>
+			Press "ASK THEM" after eliminate two most likely positive staff to see the result.
+		</div>
+	</div>
+</div>
+
+<div class="susImg">
+    <div class="sus">
+        <img id="pic1" onclick="changeImage()" ondblclick="window.location.href = '#popup1'" src="sus1.png"/>
+    </div>
+    <div class="sus">
+        <img id="pic2" onclick="changeImage2()" ondblclick="window.location.href = '#popup2'" src="sus2.png" />
+    </div>
+    <div class="sus">
+        <img id="pic3" onclick="changeImage3()" ondblclick="window.location.href = '#popup3'" src="sus3.png"/>
+    </div>
+</div>
+
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h2>SARAH</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			- A nurse.<br>
+			- American born.<br>
+			- Have some close contacts to positive patients.<br>
+			- Wear a mask sometimes.
+		</div>
+	</div>
+</div>
+<div id="popup2" class="overlay">
+	<div class="popup">
+		<h2>ADAM</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			- A family doctor.<br>
+			- American born.<br>
+			- Have many close contacts to positive patients.<br>
+			- Wear a mask all the times.
+		</div>
+	</div>
+</div>
+<div id="popup3" class="overlay">
+	<div class="popup">
+		<h2></h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			- A surgeon.<br>
+			- Chinese born.<br>
+			- Have least close contacts to positive patients.<br>
+			- Wear a mask all the times.
+		</div>
+	</div>
+</div>
+
+
+
+<!-- Alert Button -->
+<div class="alert">ASK THEM</div>
+
+
+
+ <script src="detscript.js"></script>
+ <script type="text/javascript">
+var timePassed = parseInt(sessionStorage.getItem('timePassed'));
+var timerInterval = null;
+document.getElementById("timer").innerHTML = `
+<div class="base-timer">
+  <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <g class="base-timer__circle">
+      <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+    </g>
+  </svg>
+  <span id="base-timer-label" class="base-timer__label">${formatTime(
+    timePassed
+  )}</span>
+</div>
+`;
+
+startTimer();
+
+
+function startTimer() {
+  timerInterval = setInterval(() => {
+    timePassed += 1;
+    document.getElementById("base-timer-label").innerHTML = formatTime(
+      timePassed
+    );
+  }, 1000);
+}
+
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+
+  if (seconds < 10) {
+    seconds = `0${seconds}`;
+  }
+
+  return `${minutes}:${seconds}`;
+}
+ </script>
+
+
+</body>
+</html>

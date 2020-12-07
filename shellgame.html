@@ -1,0 +1,89 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://www.cs.ryerson.ca/~hhvu/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<script src="https://www.cs.ryerson.ca/~hhvu/script.js"></script>
+<title>Page 2</title>
+</head>
+
+
+<body>
+
+<header>
+
+  <div class="room">
+	<span class="word">into</span>
+	<span class="word">the</span>
+	<span class="word">lab</span>
+  </div>
+  <div id="display"></div>	
+  <div id="timer"></div>
+
+</header>
+
+  <image class="btn" src="key.png" onclick="pop()"></a>
+	<div class="letter"><br><br><br>
+		<div class="line">never see my threshhold,</div>
+		<div class="line">Lose your nose,</div>
+		<div class="line">ggggget outta here or,</div>
+		<div class="line">HA ha! Covid gotchu? </div>
+	</div>
+	<div id = "board">
+
+</div>
+<audio autoplay loop>
+    <source src="https://www.cs.ryerson.ca/~hhvu/musicP2.mp3">
+</audio>
+
+  <div id = "start"></div>
+  <div id = "reset"></div>
+
+<script src="https://www.cs.ryerson.ca/~hhvu/title.js"></script>
+<script type="text/javascript">
+var timePassed = 0;
+var timerInterval = null;
+document.getElementById("timer").innerHTML = `
+<div class="base-timer">
+  <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <g class="base-timer__circle">
+      <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+    </g>
+  </svg>
+  <span id="base-timer-label" class="base-timer__label">${formatTime(
+    timePassed
+  )}</span>
+</div>
+`;
+
+startTimer();
+
+
+function startTimer() {
+  timerInterval = setInterval(() => {
+    timePassed += 1;
+    document.getElementById("base-timer-label").innerHTML = formatTime(
+      timePassed
+    );
+  }, 1000);
+}
+
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+
+  if (seconds < 10) {
+    seconds = `0${seconds}`;
+  }
+
+  return `${minutes}:${seconds}`;
+}
+</script>
+
+
+</body>
+
+
+</html>
