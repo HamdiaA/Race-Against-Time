@@ -95,6 +95,8 @@ class PinLogin {
             }).then(response => {
                 //if login successful
                 if (response.status === 200) {
+                    //THHIS IS SO THAT THE TIMER IS CONTINUED TO NEXT PAGE
+                    sessionStorage.setItem("timePassed", timePassed);
                     window.location.href = this.redirectTo; //redirect to file
                 //if unsuccesful
                 //display animation and red background

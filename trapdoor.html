@@ -13,9 +13,12 @@
 <title> trap door</title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta charset="utf-8">
-<link href = "traproom.css" rel="stylesheet">   
+<link href = "http://webdev.scs.ryerson.ca/~j29long/project/traproom.css" rel="stylesheet">   
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
 <!--JAVASCRIPT TO VALDIATE FORM-->
 <script type ="text/javascript">
@@ -46,6 +49,9 @@ function validateForm()
         You're <em>TRAPPED ! </em>Answer this question to escape!
         </div>
 
+    <!--TIMER-->
+    <div id="timer"> </div> 
+
 <div id="wrapper">
 <!--RIDDLE-->
 <div class="riddle">
@@ -71,13 +77,13 @@ function validateForm()
 
 <!--BACK BUTTON-->
 <div id ="back" class="backButton">
-<a href="page10.html" class="button">Go back!</a>
+<a href="http://webdev.scs.ryerson.ca/~j29long/project/page10.html" class="button">Go back!</a>
 
 <!--JAVASCRIPT TO DISPLAY BACK BUTTON AT A CERTAIN TIME-->
 <script>
 const back = document.getElementById('back');
 back.style.display = 'none'; 
-setTimeout(()=> {back.style.display= 'block';},5000); // change the timing for longer -50000 = 5 min
+setTimeout(()=> {back.style.display= 'block';},50000); // change the timing for longer -50000 = 5 min
 </script>       
 
 </div>
@@ -85,6 +91,58 @@ setTimeout(()=> {back.style.display= 'block';},5000); // change the timing for l
 </div>
 
 
+
+
+<!--TIMER-->
+<script type="text/javascript">
+ 
+    var timePassed = parseInt(sessionStorage.getItem("timePassed"));
+    let timerInterval = null;
+    document.getElementById("timer").innerHTML = `
+    <div class="base-timer">
+      <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <g class="base-timer__circle">
+          <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+        </g>
+      </svg>
+      <span id="base-timer-label" class="base-timer__label">${formatTime(
+        timePassed
+      )}</span>
+    </div>`;
+    
+    startTimer();
+    
+    
+    function startTimer() {
+      timerInterval = setInterval(() => {
+        timePassed += 1;
+        document.getElementById("base-timer-label").innerHTML = formatTime(
+          timePassed
+        );
+      }, 1000);
+    }
+    
+    function formatTime(time) {
+      const minutes = Math.floor(time / 60);
+      let seconds = time % 60;
+    
+      if (seconds < 10) {
+        seconds = `0${seconds}`;
+      }
+    
+      return `${minutes}:${seconds}`;
+    }
+  
+  
+  //AFTER EACH PAGE, BEFORE LINE DIRECTING TO NEXT INPUT
+    
+            function redirect()
+            {
+            sessionStorage.setItem("timePassed", timePassed);
+            window.location.href="http://webdev.scs.ryerson.ca/~j29long/project/page7-hallway.html";
+            }
+            
+    </script>
 </body>
 
 </html>

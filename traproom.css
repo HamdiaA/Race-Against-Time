@@ -149,3 +149,41 @@ form{
   {
 text-align:center;
   }
+
+
+  /*TIMER MATERIAL*/
+.base-timer {
+    position: relative;
+    width: 10%;
+    margin:auto;
+    float: left;
+    
+  }
+  
+  .base-timer__circle {
+    fill: none;
+    stroke: none;
+  }
+  
+  .base-timer__path-elapsed {
+    stroke-width: 7px;
+    stroke: #FFDEAD;
+  }
+  /*TIME- ADJUST MARGIN SIZE FOR PLACEMENT*/
+  .base-timer__label {
+    position: absolute;
+    
+    width: 100%;
+    height: 100%;
+    
+    top: -2%;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    font-family: "Nosifer", cursive;
+    font-size: 30px;
+    color: #FFF8DC;
+  }
+  
