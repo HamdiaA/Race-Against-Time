@@ -2,36 +2,74 @@
 <html>
 <head>
 	<title>Page 3</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="page3.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Xanh%20Mono">
 </head>
 <body>
-	
-	
-	<a href="page4.html">
-		<img src="carkeys.jpg">
-	</a >
-
-	<!--
-	<section class = "keys"> <a href="page4.html">
-	</a>
-	</section>
-	<div class = "image">
-		<img src="background.jpg" class="class">
+	<!-- alert banner on top of page !-->
+	<div class="alert">
+  		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  		Find the car keys to get to the hospital!
 	</div>
-	!-->
+	<!-- timer !-->
+	<div id="timer"></div>
+	<!--carkeys to get to next room -->
+	<a href="page4.html">
+		<img src="carkey.png" alt="carkey">
+	</a >
+	<!--play music in background -->
+	<audio autoplay loop>
+        <source src="backgroundmusic.mp3">
+  	</audio>
+
+  	<!--js for flashlight -->
+	<script src="page3.js"></script>
+	<!--js for timer -->
 	<script type="text/javascript">
-		function update(e) {
-			var x = e.clientX || e.touches[0].clientX
-			var y = e.clientY || e.touches[0].clientY
+var timePassed = parseInt(sessionStorage.getItem('timePassed'));
+//var timePassed = 0;
+var timerInterval = null;
+document.getElementById("timer").innerHTML = `
+<div class="base-timer">
+  <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <g class="base-timer__circle">
+      <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+    </g>
+  </svg>
+  <span id="base-timer-label" class="base-timer__label">${formatTime(
+    timePassed
+  )}</span>
+</div>
+`;
 
-			document.documentElement.style.setProperty('--cursorX', x + 'px')
-			document.documentElement.style.setProperty('--cursorY', y + 'px')
-		}
+startTimer();
 
-		document.addEventListener('mousemove',update)
-		document.addEventListener('touchmove',update)
 
-	</script>
+function startTimer() {
+  timerInterval = setInterval(() => {
+    timePassed += 1;
+    document.getElementById("base-timer-label").innerHTML = formatTime(
+      timePassed
+    );
+  }, 1000);
+}
+
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+
+  if (seconds < 10) {
+    seconds = `0${seconds}`;
+  }
+
+  return `${minutes}:${seconds}`;
+}
+
+sessionStorage.setItem("timePassed", timePassed);
+</script>
+
 </body>
 </html>

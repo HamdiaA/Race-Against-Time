@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page 5</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="page5.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Xanh%20Mono">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Homemade%20Apple">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<!-- alert banner on top of page-->
+	<div class="alert">
+  		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  		Choose the correct box to get your PPE! Choose wisely.
+	</div>
+	<!-- timer -->
+	<div id="timer"></div>
+	<!--paper with hunt-->
+	<div>
+        <img class= "paper" src ="paper.jpg" alt="paper with clue">
+    </div>
+<!-- boxes -->
+	<div class="absolute">
+		<div class="container">
+    		<div class="row">
+	    		<div class="col-sm-4">
+	      			<a href="http://webdev.scs.ryerson.ca/~j29long/project/page6-hallway.html">
+						<img src="red.png" class="bin" alt="red storage bin">
+		  			</a>
+	    		</div>
+	    		<div class="col-sm-4">
+	    			<a href="page5trap.html">
+	      				<img src="blue.png" class="bin" alt="blue storage bin">
+	      			</a>
+	    		</div>
+	    		<div class="col-sm-4">	
+	    			<a href="page5trap.html">
+	      				<img src="grey.png" class="bin" alt="grey storage bin">
+	      			</a>
+	    		</div>
+  			</div>
+  
+		</div>
+	</div>
+<!--hint button -->
+	<div class="fixed">
+    	<div class="box" >
+		    <a class="button" href="#popup1">Hint</a>
+		</div>
+	</div>
+
+	<div id="popup1" class="overlay">
+		<div class="popup">
+		    <h2>Hint</h2>
+		    <a class="close" href="#">&times;</a>
+		    <div class="content">
+		        These two are the same <br>
+                82 69 68<br>
+                114 101 100 <br>
+	        </div>
+	    </div>
+	</div>
+<!--background music-->
+	<audio autoplay loop>
+        <source src="backgroundmusic2.mp3">
+ 	</audio>
+ <!-- js for timer -->
+<script type="text/javascript">
+var timePassed = parseInt(sessionStorage.getItem('timePassed'));
+var timerInterval = null;
+document.getElementById("timer").innerHTML = `
+<div class="base-timer">
+  <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <g class="base-timer__circle">
+      <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+    </g>
+  </svg>
+  <span id="base-timer-label" class="base-timer__label">${formatTime(
+    timePassed
+  )}</span>
+</div>
+`;
+
+startTimer();
+
+
+function startTimer() {
+  timerInterval = setInterval(() => {
+    timePassed += 1;
+    document.getElementById("base-timer-label").innerHTML = formatTime(
+      timePassed
+    );
+  }, 1000);
+}
+
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+
+  if (seconds < 10) {
+    seconds = `0${seconds}`;
+  }
+
+  return `${minutes}:${seconds}`;
+}
+
+sessionStorage.setItem("timePassed", timePassed);
+</script>
+</body>
+</html>
