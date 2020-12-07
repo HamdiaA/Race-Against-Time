@@ -3,23 +3,23 @@
 <head>
     <meta charset="utf-8">
     <title>Page11</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="page11.css">
     <script type="text/javascript" src="page11.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 
     <body>
-		<div id="timer"> </div>
         <div>
-            <img class= "briefcase" src ="blackclosedcase.PNG" alt="" id="swapPic" onclick="swapPic();" />
+            <img class= "briefcase" src ="images/blackclosedcase.PNG" alt="" id="swapPic" onclick="swapPic();" />
         </div>
 
         <form action="http://webdev.scs.ryerson.ca/~j29long/project/trapdoor.html">
             <button class="button" type="submit">Vaccine A</button>
          </form>
 
-         <button class="button" type="submit" onclick="direct()">Vaccine B</button>
+         <form action="https://www.cs.ryerson.ca/~habdulha/CPS530/Project/highscores.html">
+            <button class="button" type="submit">Vaccine B</button>
+         </form>
 
          <form action="http://webdev.scs.ryerson.ca/~j29long/project/trapdoor.html">
             <button class="button" type="submit">Vaccine C</button>
@@ -28,66 +28,5 @@
          <form action="http://webdev.scs.ryerson.ca/~j29long/project/trapdoor.html">
             <button class="button" type="submit">Vaccine D</button>
          </form>
-		 <script>
-	function sendTime(name, time){
-	$.ajax({
-                url: 'data.php',
-                method: 'POST',
-                data: {'name' : name, 'timer': time},
-                success: function(html) 
-                {
-                    alert(html);
-                }
-            });
-}
-	
-	function direct(){
-		sessionStorage.setItem("timePassed", timePassed);
-		var name = prompt("Please enter your name for our record:");
-		sendTime(name, timePassed);
-		window.location.href = "https://www.cs.ryerson.ca/~habdulha/CPS530/Project/highscores.html";
-	}
-</script>
-		
-	<script>
-		var timePassed = 0;
-var timerInterval = null;
-document.getElementById("timer").innerHTML = `
-<div class="base-timer">
-  <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-    <g class="base-timer__circle">
-      <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
-    </g>
-  </svg>
-  <span id="base-timer-label" class="base-timer__label">${formatTime(
-    timePassed
-  )}</span>
-</div>
-`;
-
-startTimer();
-
-
-function startTimer() {
-  timerInterval = setInterval(() => {
-    timePassed += 1;
-    document.getElementById("base-timer-label").innerHTML = formatTime(
-      timePassed
-    );
-  }, 1000);
-}
-
-function formatTime(time) {
-  const minutes = Math.floor(time / 60);
-  let seconds = time % 60;
-
-  if (seconds < 10) {
-    seconds = `0${seconds}`;
-  }
-
-  return `${minutes}:${seconds}`;
-}
- </script>
-	
     </body>
 </html>

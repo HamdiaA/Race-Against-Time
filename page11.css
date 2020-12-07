@@ -1,5 +1,5 @@
 html {
-    background: url("page11.png")  no-repeat center center fixed;
+    background: url(images/trnava-university-lab.jpg)  no-repeat center center fixed;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -40,42 +40,17 @@ html {
 
 .briefcase:hover {
     transform:scale(3.25);
-    -webkit-box-shadow: 0px 0px 3px 5px #f2e1f2;
-    -moz-box-shadow: 0px 0px 3px 5px #f2e1f2;
-    box-shadow: 0px 0px 3px 5px #f2e1f2; 
 }
 
-.briefcase.open{
-    padding-top: 460px;
-    margin-left: 400px;
-    width:25%*/
-}
-.base-timer {
-  position: relative;
-  width: 10%;
-  float: right;
-  
-}
-
-.base-timer__circle {
-  fill: none;
-  stroke: none;
-}
-
-.base-timer__path-elapsed {
-  stroke-width: 7px;
-  stroke: #FFDEAD;
-}
-.base-timer__label {
-  position: absolute;
-  
-  width: 100%;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  font-family: "Nosifer", cursive;
-  font-size: 28px;
-  color: #FFF8DC;
+@media only screen and (max-width : 736px)
+{
+    .button{
+        display: block;
+        float: none;
+        margin: 0%;
+        margin-top: 8px;
+        width: 100%;
+        top: 0px;
+        position: static;
+      }
 }

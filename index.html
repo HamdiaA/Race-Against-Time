@@ -1,76 +1,117 @@
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
         <meta charset="utf-8">
         <title>Race Against Time</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styles.css">
         <script type="text/javascript" src="script.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Xanh Mono|Nosifer|Homemade Apple">
     </head>
     <body>
         <!-- Title Card-->
-        <section style="background-color:blue;">
-            <h1>Race Against Time</h1>
+        <section class="titlecard">
+            <div class="parallax1">
+                <h2>Race Against</h2>
+                <h1>Time</h1>
+
+                <form action="#story">
+                    <button class="button" type="submit">Story and Rules</button>
+                 </form>
+        
+                 <form action="#about">
+                    <button class="button" type="submit">About</button>
+                 </form>
+        
+                 <form action="https://www.cs.ryerson.ca/~hhvu/shellgame.html">
+                    <button class="button" type="submit">Start Game</button>
+                 </form>
+            </div>
         </section>
 
         <!-- Intro/Story-->
-        <section class="story" style="background-color:red;">
-            <h2>Story</h2><br>
-            <pre>
-                It’s the year 2050...
-                                ...foods getting low,...
-                                                        ... and so are supplies, ppl r getting desperate..
-                Doctor (you the player) in a research lab, goes to hospital to give the vaccine while, the super rich, corrupt company is against that and are trying to stop you
-                Goes from room to room completing tasks before time runs out
-                Have to give (correct) vaccine to head of the hospital <= goal
+        <section class="story" style="background-color: #8ecae6;" id ="story">
+            <h2>Story</h2>
+            <p>
+                It’s the year 2050...food is getting low,...and so are supplies. The people are getting desperate.
+                A doctor (you the player) in a research lab, goes to hospital to give the vaccine while, a super rich, corrupt company 
+                is against that and are trying to stop you! The want to steal the vaccine and sell it at a super high price which you absolutely 
+                cannot allow. 
+                Your goal is to give the correct vaccine to head of the hospital in the shortest amount of time.
                  
-            </pre>
+            </p>
         </section>
 
         <!-- "Login"-->
 
-        <section>
-            <h2>What is your name Researcher?</h2>
-            <!--
-            <div class="card">
-                <div class="card fill-orange" style="position: relative;" >
-                    <img src="https://s3.amazonaws.com/uifaces/faces/twitter/mrvanz/128.jpg">
-                    <h3>Francesco Moustache</h1>
-                    <h4>Python Ninja</h4>
-                    <h5>Lived all my life on the top of mount Fuji, learning the way to be a Ninja Dev.</h5>
-                </div>    
+        <section style="margin-bottom: 242px;">
+            <div class="parallax2">
+
+                <h2 class="research">What is your name Researcher?</h2>                 
+
+                <div class="user">
+                    <div class="fillColor" style="width:70%">
+                      <header>
+                        <h3>SunnyBrook Hospital</h3>
+                      </header>
+                      <div >
+                        <hr>
+                        <img src="images/id.jpg" alt="Avatar" class="card__icon" style="width:100px; float: left; border-radius: 50px; margin-right:30px;">
+                        <form action="scores.php" method="get">
+                            <h3 style="font-weight: normal;">Researcher</h3>
+                          Name: <input type="text" name="name"><br><br><br><br>
+                            <button input type="submit" class="userBtn">Begin</button>
+                          </form><br>
+                      </div>
+                  
+                    </div>
+                  </div>
             </div>
-            -->
+
         </section>
 
         <!-- About Us Section-->
-        <section style="background-color:rgb(20, 223, 223);">
+        <section style="background-color:#8ecae6; margin-top: -282px;" id="about">
             <h2>About Us</h2><br>
-            <pre>Group: 16&#9;&#9;&#9;Section: 2&#9;&#9;&#9;Members: 4
-                
-
-
-Temporary Text Here with mission and such
-            </pre><br><br><br>
+            <p style="text-align: center;">Group: 16&#9;&#9;&#9;Section: 2&#9;&#9;&#9;Members: 4<br><br>
+            We made this site in the hopes to educate as well as entertain younger audiences about the pandemic. 
+            Our target is gamers and youth in general.
+            </p><br><br><br>
             <div class="cards">
-                <div class="card fill-orange" data-card="0">
-                  <div class="card__icon" data-icon="1"></div>
-                  <div class="card__detail">details</div>
-                </div>
-                <div class="card fill-blue" data-card="1">
-                  <div class="card__icon" data-icon="2"></div>
-                  <div class="card__detail">details</div>
-                </div>
-                <div class="card fill-green" data-card="2">
-                  <div class="card__icon" data-icon="3"></div>
-                  <div class="card__detail">details</div>
-                </div>
-                <div class="card fill-purple" data-card="3">
-                    <div class="card__icon" data-icon="4"></div>
-                    <div class="card__detail">details</div>
+              <div class="card fill-purple" data-card="0">
+                <div class="card__icon" data-icon="Hamdia Abdullahi"></div>
+                <hr>
+                <div class="card__detail">
+                  <br>
+                  <h4>~2nd Year CS student <br> ~Contributions: Page 1, 11, Highscores</h4>
                 </div>
               </div>
+              <div class="card fill-blue" data-card="1">
+                <div class="card__icon" data-icon="Jenny Long"></div>
+                <hr>
+                <div class="card__detail">
+                  <br>
+                  <h4>~2nd Year CS student <br> ~Contributions: Page 6, 7, 10, trap door</h4>
+                </div>
+              </div>
+              <div class="card fill-green" data-card="2">
+                <div class="card__icon" data-icon="Faheema Desai"></div>
+                <hr>
+                <div class="card__detail">
+                  <br>
+                  <h4>~2nd Year CS student <br> ~Contributions: Page 3, 4, 5 </h4>
+                </div>
+              </div>
+              <div class="card fill-orange" data-card="3">
+                <div class="card__icon" data-icon="David Vu"></div>
+                <hr>
+                <div class="card__detail">
+                  <br>
+                  <h4>~2nd Year CS student <br> ~Contributions: Page 2, 8, 9 </h4>
+                </div>
+              </div>
+                
         </section>
 
 

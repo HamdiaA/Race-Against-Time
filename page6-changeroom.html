@@ -5,8 +5,10 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta charset="utf-8">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<link href = "page6-changeroom.css" rel="stylesheet">   
+<link href = "http://webdev.scs.ryerson.ca/~j29long/project/page6-changeroom.css" rel="stylesheet">   
 <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
 
 
 
@@ -14,15 +16,22 @@
  
 <body>
 
+
+
 <!-- ALERT MESSAGE (TOP OF PAGE)-->
 <div class="alert">
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
         Change into PPE Gear and then click on exit!
         </div>
 
+         <!--TIMER-->
+ <div id="timer"> </div> 
+      
+
+
         <!-- BACK BUTTON FOR PREVIOUS PAGE-->
                 <div id ="back" class="backButton">
-                <a href="page7-hallway.html" class="button">Exit</a>
+                <a onclick="redirect()" class="button">Exit</a>
                 </div>   
                 <!-- PPE ELEMENTS FOR DRAGGING-->
                 <div id= "body" class ="default"></div>
@@ -35,9 +44,10 @@
                 <div id= "hat" class ="default"></div>
                 </div>
              
-            
+    
+
               <!-- JS CODE FOR DRAGGABLE COMPONENT-->
-                <script src="page6-changeroom.js"> </script>
+                <script src="http://webdev.scs.ryerson.ca/~j29long/project/page6-changeroom.js"> </script>
                 
                 
 
@@ -48,7 +58,56 @@
     <source src="ambient.mp3">
 </audio>
 
+<!--TIMER-->
+<script type="text/javascript">
+ 
+  var timePassed = parseInt(sessionStorage.getItem("timePassed"));
+  let timerInterval = null;
+  document.getElementById("timer").innerHTML = `
+  <div class="base-timer">
+    <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <g class="base-timer__circle">
+        <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+      </g>
+    </svg>
+    <span id="base-timer-label" class="base-timer__label">${formatTime(
+      timePassed
+    )}</span>
+  </div>`;
+  
+  startTimer();
+  
+  
+  function startTimer() {
+    timerInterval = setInterval(() => {
+      timePassed += 1;
+      document.getElementById("base-timer-label").innerHTML = formatTime(
+        timePassed
+      );
+    }, 1000);
+  }
+  
+  function formatTime(time) {
+    const minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+  
+    if (seconds < 10) {
+      seconds = `0${seconds}`;
+    }
+  
+    return `${minutes}:${seconds}`;
+  }
 
+
+//AFTER EACH PAGE, BEFORE LINE DIRECTING TO NEXT INPUT
+  
+          function redirect()
+          {
+          sessionStorage.setItem("timePassed", timePassed);
+          window.location.href="http://webdev.scs.ryerson.ca/~j29long/project/page7-hallway.html";
+          }
+          
+  </script>
 
 </body>
 
