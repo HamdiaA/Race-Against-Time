@@ -4,53 +4,120 @@
 <title> Page 6 pin</title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta charset="utf-8">
-<link href = "page6-login.css" rel="stylesheet">
-<link href = "https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href = "http://webdev.scs.ryerson.ca/~j29long/project/page6-login.css" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
+
+
+<!-- ALERT MESSAGE (TOP OF PAGE)-->
     <div class="alert">
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
         Enter the Code and press = to submit
         </div>
 
+  <!--TIMER-->
+  <div id="timer"> </div>
+
 
 <div class= "container">
+    <!--TOP SECTION INPUT -->
 <div class="pin-login" id="mainPinLogin">
-    <input type="password" readonly class ="pin-login__text">
+    
+    <input type="password" readonly class ="pin-login__text"> 
     <div class ="pin-login__numpad">
     
     </div>
+
+
+    <!-- BACK BUTTON FOR PREVIOUS PAGE-->
     <div id ="back" class="backButton">
-        <a href="page6-hallway.html" class="button">Go back!</a>
+        <a href="http://webdev.scs.ryerson.ca/~j29long/project/page6-hallway.html" class="button">Go back!</a>
     </div>
 </div>
 
+      
 
 
 
 
-<script src="pin-test.js"></script>
+
+    
+
+
+<!--LINK JAVASCRIPT FOR VALIDATIONS-->
+<script src="http://webdev.scs.ryerson.ca/~j29long/project/pin-test.js"> </script>
+
+
 <script>
+
     new PinLogin(
         {
             el:document.getElementById("mainPinLogin"),
-            loginEndpoint: "page6-login.php",
-            redirectTo:"page6-changeroom.html",
+            loginEndpoint: "http://webdev.scs.ryerson.ca/~j29long/project/page6-login.php", // VALIDATION FOR PIN CODE
+            redirectTo:"http://webdev.scs.ryerson.ca/~j29long/project/page6-changeroom.html", // REDIRECTS TO THIS PAGE IF PIN IS VALID
             maxNumbers: 5 /*MAX 5 number for pin*/
         }
     );
 </script>
 
+
+<!--AUDIO-->
 <audio autoplay loop>
     <source src="HospitalBackground.mp3">
 </audio>
 
+<!--TIMER-->
+<script type="text/javascript">
+    //let timePassed=0;
+    
+    var timePassed = parseInt(sessionStorage.getItem("timePassed"));
+    let timerInterval = null;
+    document.getElementById("timer").innerHTML = `
+    <div class="base-timer">
+      <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <g class="base-timer__circle">
+          <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+        </g>
+      </svg>
+      <span id="base-timer-label" class="base-timer__label">${formatTime(
+        timePassed
+      )}</span>
+    </div>`;
+    
+    startTimer();
+    
+    
+    function startTimer() {
+      timerInterval = setInterval(() => {
+        timePassed += 1;
+        document.getElementById("base-timer-label").innerHTML = formatTime(
+          timePassed
+        );
+      }, 1000);
+    }
+    
+    function formatTime(time) {
+      const minutes = Math.floor(time / 60);
+      let seconds = time % 60;
+    
+      if (seconds < 10) {
+        seconds = `0${seconds}`;
+      }
+    
+      return `${minutes}:${seconds}`;
+    }
+    </script>
 
+  
+</script>
 </body>
 
 </html>

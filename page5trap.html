@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page 5 Trap</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="page5.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Xanh%20Mono">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Homemade%20Apple">
+	<script type="text/javascript">
+		function validateForm() {
+  			var x = document.forms["myForm"]["answer"].value;
+  			if (x == "PPE" || x == "ppe") {
+    			return true;
+  			}
+  			alert("Wrong Answer. Try Again");
+  			return false;
+		}
+	</script>
+
+</head>
+<body>
+	<!-- alert banner on top of page !-->
+	<div class="alert">
+  		<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  		You chose the wrong box! Answer the question to go back!
+	</div>
+
+<!--riddle -->
+	<div class="center">
+		<img src="riddle.jpg" class="img">
+	</div>
+	<!--form for valid answer -->
+	<div class="center">
+	<form name = "myForm" action="page5.html" onsubmit= "return validateForm()" method="post">
+  		<input type="text" name="answer" required>
+  		<input type="submit" value="Submit">
+  	</form>
+  </div>
+  <!--paper clue -->
+	<div>
+		<img src="clue.jpg" class = "clue" alt="clue on paper">
+	</div>
+<!--background music -->
+	<audio autoplay loop>
+        <source src="backgroundmusic2.mp3">
+ 	</audio>
+
+
+<!--js for timer-->
+ 		<script type="text/javascript">
+var timePassed = parseInt(sessionStorage.getItem('timePassed'));
+document.getElementById("timer").innerHTML = `
+<div class="base-timer">
+  <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <g class="base-timer__circle">
+      <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+    </g>
+  </svg>
+  <span id="base-timer-label" class="base-timer__label">${formatTime(
+    timePassed
+  )}</span>
+</div>
+`;
+
+startTimer();
+
+
+function startTimer() {
+  timerInterval = setInterval(() => {
+    timePassed += 1;
+    document.getElementById("base-timer-label").innerHTML = formatTime(
+      timePassed
+    );
+  }, 1000);
+}
+
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+
+  if (seconds < 10) {
+    seconds = `0${seconds}`;
+  }
+
+  return `${minutes}:${seconds}`;
+}
+
+sessionStorage.setItem("timePassed", timePassed);
+</script><script type="text/javascript">
+var timePassed = sessionStorage.getItem("timePassed");
+var timerInterval = null;
+document.getElementById("timer").innerHTML = `
+<div class="base-timer">
+  <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <g class="base-timer__circle">
+      <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+    </g>
+  </svg>
+  <span id="base-timer-label" class="base-timer__label">${formatTime(
+    timePassed
+  )}</span>
+</div>
+`;
+
+startTimer();
+
+
+function startTimer() {
+  timerInterval = setInterval(() => {
+    timePassed += 1;
+    document.getElementById("base-timer-label").innerHTML = formatTime(
+      timePassed
+    );
+  }, 1000);
+}
+
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+
+  if (seconds < 10) {
+    seconds = `0${seconds}`;
+  }
+
+  return `${minutes}:${seconds}`;
+}
+
+sessionStorage.setItem("timePassed", timePassed);
+</script>
+
+</body>
+</html>

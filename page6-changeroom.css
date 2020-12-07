@@ -17,7 +17,7 @@ body{
 }
 
 
-
+/*ALERT BOX */
 .alert {
     padding: 20px;
     background-color: #023047;
@@ -47,7 +47,7 @@ body{
 text-align:center;
   }
 
-
+/*BACK BUTTON*/
 #button
 {
     display:block;
@@ -89,7 +89,7 @@ a:hover
 }
 
 
-
+/*PPE DRAG COMPONENTS*/
 
 #body
 {
@@ -97,7 +97,7 @@ background-image:url('images/ppe/body.png');
 height: 500px;
 width:500px;
 z-index: 1;
-margin-top: 150px;
+margin:auto;
 }
 
 #gloves
@@ -154,12 +154,12 @@ width:500px;
 z-index: 2;
 left:200px;
 }
-/* MODIFY TO PPE GEAR*/
+/*  PPE GEAR  IMG DEFAULT */
 .default
 {
 background-repeat: no-repeat;
 position:absolute;
-background-position: bottom left;
+
 background-size:contain;
 }
 
@@ -168,7 +168,51 @@ background-size:contain;
     align-items: left;
     justify-content: space-around;
     min-height: 100vh;   
+    margin-left:60%;
 }
+
+
+/*TIMER MATERIAL*/
+.base-timer {
+  position: relative;
+  width: 10%;
+  margin:auto;
+  float: right;
+  
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: #FFDEAD;
+}
+/*TIME- ADJUST MARGIN SIZE FOR PLACEMENT*/
+.base-timer__label {
+  position: absolute;
+  
+  width: 100%;
+  height: 100%;
+  
+  top: -2%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Nosifer", cursive;
+  font-size: 30px;
+  color: #FFF8DC;
+}
+
+
+
+
+
+
 
 @media screen and (max-width: 700px){
   body{
@@ -187,10 +231,10 @@ background-size:contain;
   .popup{
     width: 70%;
   }
-body{
-  width:70%;
-}
 
+#body{
+  bottom:40px;
+}
   .alert-box{
     width:90%;
  

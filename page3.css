@@ -1,0 +1,92 @@
+img{
+	height: 30px;
+	max-width: 30px;
+	margin-left: 150px;
+	margin-top: 200px;
+}
+
+body{
+    background-image: url("background.jpg");
+    background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;   
+}
+
+:root{
+	cursor: none;
+	--cursorX: 50vw;
+	--cursorY: 50vh;
+}
+
+:root:before{
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	pointer-events: none;
+	background: radial-gradient(circle 7vmax at var(--cursorX) var(--cursorY), 
+	rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 80%, rgba(0,0,0,0.95) 100%)
+}
+
+.alert {
+  padding: 20px;
+  background-color: #023047;
+  color: white;
+  font-family: 'Xanh Mono';
+  text-align: center;
+  position: relative;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+
+
+.base-timer {
+  position: relative;
+  width: 10%;
+  margin-top: 100px;
+  margin-right: 2%;
+  float: right;
+
+}
+
+.base-timercircle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timerpath-elapsed {
+  stroke-width: 7px;
+  stroke: #FFDEAD;
+}
+.base-timer__label {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  top: -2%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Xanh Mono", cursive;
+  font-size: 30px;
+  color: #FFF8DC;
+}

@@ -1,8 +1,12 @@
+/*CODE FOR POPUP BOX
+https://codepen.io/imprakash/pen/GgNMXO */
+
+/* CODE FOR ALERT BOX
+https://www.w3schools.com/howto/howto_js_alert.asp
+*/
 
 #wrapper
 {
-
- 
     width:100%px;
     display:inline-block;
 }
@@ -19,7 +23,6 @@ html{
     background-size: cover;
     width:100%
 
-
 }
 body{
     overflow: hidden;
@@ -28,6 +31,11 @@ body{
 
 }
 
+
+
+
+
+/*ARROW*/
 .arrow
 {
    
@@ -39,8 +47,8 @@ body{
 {
     max-width:20%;
     position: absolute;
-    left:400px;
-    bottom:480px;
+    left:45%;
+    bottom:380px;
     
     
 }
@@ -58,6 +66,7 @@ body{
     background-size:contain;
 }
 
+/*HINT BOX */
 .box {
     width: 40%;
     margin: 0 auto;
@@ -102,6 +111,8 @@ body{
     opacity: 1;
   }
   
+    
+  /*POP UP BOX*/
   .popup {
     margin: 70px auto;
     padding: 20px;
@@ -111,6 +122,7 @@ body{
     position: relative;
     transition: all 1s ease-in-out;
     font-family: 'Xanh Mono', monospace;
+    margin-top:250px; /*MOVE POP UP BOX MIDDLE OF PAGE*/
   
   }
   
@@ -137,6 +149,8 @@ body{
     overflow: auto;
   }
 
+
+  /*ALERT BOX ON TOP OF THE PAGE*/
   .alert {
     padding: 20px;
     background-color: #023047;
@@ -169,6 +183,42 @@ body{
 
 
 
+/*TIMER MATERIAL*/
+.base-timer {
+  position: relative;
+  width: 10%;
+  margin:auto;
+  float: left;
+  
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: #FFDEAD;
+}
+/*TIME- ADJUST MARGIN SIZE FOR PLACEMENT*/
+.base-timer__label {
+  position: absolute;
+  
+  width: 100%;
+  height: 100%;
+  
+  top: -2%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Nosifer", cursive;
+  font-size: 30px;
+  color: #FFF8DC;
+}
+
 
 
 
@@ -181,6 +231,7 @@ body{
     }
     .popup{
       width: 70%;
+      margin-top:220px; /*MOVE HINT BOX TO MIDDLE OF PAGE*/
     }
     body{
         width:70%;
@@ -191,20 +242,20 @@ body{
 
 
   .alert-box{
-    width:80%;
-  margin-left:150px;  
+    width:100%;
+  margin-left:100px;  
   }
 
   .arrow
   { 
     max-width:40%;
-  
   }
+ 
   .arrowbox
   {
       max-width:20%;
       position: inline-block;
-      margin-left:-170px;
+      margin-left:1%;
       margin-top:70px;
   }
 

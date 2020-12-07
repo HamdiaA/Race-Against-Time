@@ -1,9 +1,14 @@
+/*CODE FOR POPUP BOX
+https://codepen.io/imprakash/pen/GgNMXO */
 
+/* CODE FOR ALERT BOX
+https://www.w3schools.com/howto/howto_js_alert.asp
+*/
 #wrapper
 {
-
  
     width:100%;
+    position:relative;
 }
 
 
@@ -25,25 +30,30 @@ body{
 
 }
 
+/*ARROW*/
 .arrow
 {
   max-width:20%;
   transform:rotate(120deg);
-  justify-content:center
+  justify-content:center;
+
 }
 .arrowbox
 {
     max-width:30%;
     position: absolute;
-    right:400px;
-    top:350px;
+    left:35%;;
+    top:300px;
 }
+
+/*POSTER */
 .poster
 {   display:inline-block;
     max-width: 10%;
-    margin-left: 200px;
-    padding-top: 190px;
+    margin-left: 20%;
+    padding-top: 250px;
     transition: transform .2s;
+    position:absolute;
 
 }
 .poster:hover
@@ -52,13 +62,13 @@ body{
     
 }
 
-
+/*SANITIZER*/
 .sanitizer
 {
     position:absolute;
     max-width: 5%;
-    margin-left: 600px;
-    margin-top: 100px;
+    margin-left: 55%;
+    margin-top: 350px;
     transition: all 0.3s ease-in-out 0s;
 }
 .sanitizer:hover
@@ -67,7 +77,7 @@ body{
     
 }
 
-
+/*ALERT BOX ON TOP OF THE PAGE*/
 .alert {
   padding: 20px;
   background-color: #023047;
@@ -99,16 +109,17 @@ text-align:center;
 }
 
 
-
+/*SANITIZER/POSTER IMG DEFAULT SETTINGS*/
 
 .default
 {
     background-repeat: no-repeat;
     position:absolute;
-    background-position: bottom left;
+    /*background-position: bottom left; */
     background-size:contain;
 }
 
+/*HINT BOX */
 .box {
     width: 40%;
     justify-content:top left;
@@ -116,6 +127,9 @@ text-align:center;
     border-radius: 20px/50px;
     background-clip: padding-box;
     text-align: center;
+    position:absoltue;
+    margin-left:70%;
+
   }
   
   .button {
@@ -148,6 +162,7 @@ text-align:center;
     opacity: 1;
   }
   
+  /*POP UP BOX*/
   .popup {
     margin: 70px auto;
     padding: 20px;
@@ -157,6 +172,7 @@ text-align:center;
     position: relative;
     transition: all 1s ease-in-out;
     font-family: 'Xanh Mono', monospace;
+    margin-top:250px; /*MOVE POP UP BOX MIDDLE OF PAGE*/
     
   }
   
@@ -183,7 +199,46 @@ text-align:center;
     max-height: 30%;
     overflow: auto;
   }
+
+/*TIMER MATERIAL*/
+  .base-timer {
+    position: relative;
+    width: 10%;
+    margin:auto;
+    float: right;
+    
+  }
   
+  .base-timer__circle {
+    fill: none;
+    stroke: none;
+  }
+  
+  .base-timer__path-elapsed {
+    stroke-width: 7px;
+    stroke: #FFDEAD;
+  }
+  /*TIME- ADJUST MARGIN SIZE FOR PLACEMENT*/
+  .base-timer__label {
+    position: absolute;
+    
+    width: 100%;
+    height: 100%;
+    
+    top: -2%;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    font-family: "Nosifer", cursive;
+    font-size: 30px;
+    color: #FFF8DC;
+  }
+
+
+
+  /* MOBILE SCREEN SIZE*/
   @media screen and (max-width: 700px){
     .box{
   
@@ -196,7 +251,8 @@ text-align:center;
     }
 
     .popup{
-      width: 70%;
+      width: 50%;
+      margin-top:220px; /*MOVE HINT BOX TO MIDDLE OF PAGE*/
     }
     html{
         width:70%;
@@ -204,8 +260,8 @@ text-align:center;
     }
 
     .alert-box{
-      width:80%;
-   margin-left:100px;  
+      width:100%;
+      margin-left:100px;
     }
 
    .arrow
@@ -213,7 +269,7 @@ text-align:center;
 
      transform:rotate(120deg);
      justify-content:left;
-     margin-left: 150px;
+     left: 40%;
      margin-top:40px;
    }
    .arrowbox
@@ -226,8 +282,9 @@ text-align:center;
    .poster {
      min-width:30%;
      position: absolute;
+     margin-left: 60%;
      
-    padding-top:160px;
+    padding-top:240px;
    }
    .poster:hover
    {
@@ -248,9 +305,8 @@ text-align:center;
        transform:scale(6);
        
    }
-
-
-
+  
+   
 
     
 

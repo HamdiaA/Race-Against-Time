@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page 4</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="page4.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Xanh%20Mono">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Homemade%20Apple">
+</head>
+<body>
+	<!-- alert banner on top of page !-->
+	<div class="alert">
+			<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+			Pay attention to the video!
+	</div>
+<!-- timer !-->
+<div id="timer"></div>
+<!-- youtube video -->
+	<div id="player"> </div>
+<!-- washing hands activity -->
+	<div class="center">
+		<img src="hands2.jpg"  id="image" onclick="buttonclick()"  alt="washing hands">
+		<br>
+		<input type="text" value="0" id = "nums">
+	</div>
+<!--hint -->
+	<div class="box">
+	    <a class="button" href="#popup1">Hint</a>
+	</div>
+
+	<div id="popup1" class="overlay">
+	    <div class="popup">
+	        <h2>Hint</h2>
+	        <a class="close" href="#">&times;</a>
+	        <div class="content">
+	            1 click = 1 second <br>
+	            What's the minimum amount of time you need to wash your hands?<br>
+	                     
+	        </div>
+	    </div>
+	</div>
+
+	<audio autoplay loop>
+    	<source src="backgroundmusic2.mp3">
+	</audio>
+
+<!-- js for youtube vid -->
+	<script src="page4.js"></script>
+<!-- timer -->
+	<script type="text/javascript">
+var timePassed = parseInt(sessionStorage.getItem('timePassed'));
+document.getElementById("timer").innerHTML = `
+<div class="base-timer">
+  <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <g class="base-timer__circle">
+      <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+    </g>
+  </svg>
+  <span id="base-timer-label" class="base-timer__label">${formatTime(
+    timePassed
+  )}</span>
+</div>
+`;
+
+startTimer();
+
+
+function startTimer() {
+  timerInterval = setInterval(() => {
+    timePassed += 1;
+    document.getElementById("base-timer-label").innerHTML = formatTime(
+      timePassed
+    );
+  }, 1000);
+}
+
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+
+  if (seconds < 10) {
+    seconds = `0${seconds}`;
+  }
+
+  return `${minutes}:${seconds}`;
+}
+
+sessionStorage.setItem("timePassed", timePassed);
+</script><script type="text/javascript">
+var timePassed = sessionStorage.getItem("timePassed");
+var timerInterval = null;
+document.getElementById("timer").innerHTML = `
+<div class="base-timer">
+  <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <g class="base-timer__circle">
+      <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+    </g>
+  </svg>
+  <span id="base-timer-label" class="base-timer__label">${formatTime(
+    timePassed
+  )}</span>
+</div>
+`;
+
+startTimer();
+
+
+function startTimer() {
+  timerInterval = setInterval(() => {
+    timePassed += 1;
+    document.getElementById("base-timer-label").innerHTML = formatTime(
+      timePassed
+    );
+  }, 1000);
+}
+
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+
+  if (seconds < 10) {
+    seconds = `0${seconds}`;
+  }
+
+  return `${minutes}:${seconds}`;
+}
+
+sessionStorage.setItem("timePassed", timePassed);
+</script>
+
+</body>
+</html>

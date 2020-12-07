@@ -4,10 +4,13 @@
 <title> hallway</title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta charset="utf-8">
-<link href = "page6-hallway.css" rel="stylesheet">   <!-- Change css here-->
+<link href = "http://webdev.scs.ryerson.ca/~j29long/project/page6-hallway.css" rel="stylesheet">   <!-- Change css here-->
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
 
 
 
@@ -17,31 +20,37 @@
 <body>
 
 
-<!-- ADD ITEMS HERE i.e. sanitizer and poster (separate divs)-->
-
+<!--ALERT BOX ON TOP OF TEH PAGE-->
 <div class="alert-box">
 <div class="alert">
+       
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
         Click on  the arrow to enter room       
  </div>
 </div>
 
+<!--TIMER-->
+<div id="timer"> </div>
+
+<!--WRAPPER CONTAINER FOR THE POSTER AND SANITIZER-->
 <div id="wrapper">
-        <img class= "poster" src ="images/posteredit.png" alt="">
+        <img class= "poster" src ="images/posteredit.png" alt="poster">
         
         <div id= "sanitizer" class ="default"></div> 
 
         <div>
-                <img class= "sanitizer" src ="images/sanitizer.png" alt="">  
+                <img class= "sanitizer" src ="images/sanitizer.png" alt="sanitizer">  
+
                             </div> 
-                            <div id= "arrow" class ="arrowbox"> <a href="page6-pin.html"><img class="arrow" src="images/arrow.png" alt="arrow"></a></div>
 
+                                
+                            <div id= "arrow" class ="arrowbox"> <img class="arrow" src="images/arrow.png" alt="arrow" onclick="redirect()"></div>
 
-
+<!--HINT BOX ELEMENTS-->
 <div class="box">
 	<a class="button" href="#popup1">Hint</a>
 </div>
-
+<!--POPUP BOX WHEN CLICK ON HINT BUTTON-->
 <div id="popup1" class="overlay">
 	<div class="popup">
 		<h2>Hint</h2>
@@ -54,22 +63,65 @@
 </div>
 
 </div>
+
+
+
+
+<!--MUSIC-->
 <audio autoplay loop>
         <source src="HospitalBackground.mp3">
   </audio>
 
+<!--TIMER-->
+<script type="text/javascript">
+var timePassed=0;
+//var timePassed = parseInt(sessionStorage.getItem("timePassed"));
+let timerInterval = null;
+document.getElementById("timer").innerHTML = `
+<div class="base-timer">
+  <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <g class="base-timer__circle">
+      <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+    </g>
+  </svg>
+  <span id="base-timer-label" class="base-timer__label">${formatTime(
+    timePassed
+  )}</span>
+</div>`;
+
+startTimer();
 
 
-<!-- NEED TO FIX THE ITEMS 
-CHANGE IMG to background instead??
-add change room sign and arrow to go there
--->
+function startTimer() {
+  timerInterval = setInterval(() => {
+    timePassed += 1;
+    document.getElementById("base-timer-label").innerHTML = formatTime(
+      timePassed
+    );
+  }, 1000);
+}
 
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
 
+  if (seconds < 10) {
+    seconds = `0${seconds}`;
+  }
 
+  return `${minutes}:${seconds}`;
+}
+</script>
 
-
-<!-- ADD BUTTON TO GO TO DOOR -->        
+ <!--AFTER EACH PAGE, BEFORE LINE DIRECTING TO NEXT INPUT-->
+ <script type="text/javascript">
+        function redirect()
+        {
+        sessionStorage.setItem("timePassed", timePassed);
+        window.location.href="http://webdev.scs.ryerson.ca/~j29long/project/page6-pin.html";
+        }
+        
+</script>
 
 </body>
 
