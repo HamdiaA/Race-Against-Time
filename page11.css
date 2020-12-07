@@ -44,13 +44,13 @@ html {
 
 @media only screen and (max-width : 736px)
 {
-    .button {
-        top: 0px;
-        position: fixed;
+    .button{
         display: block;
+        float: none;
         margin: 0%;
-        margin-top: 9px;
-        width: 100%
-    }
-
+        margin-top: 8px;
+        width: 100%;
+        top: 0px;
+        position: static;
+      }
 }
