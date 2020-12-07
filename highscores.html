@@ -54,45 +54,6 @@
         </div>
 
         <!-- End of Confetti! :) -->
-        
-        <?php
-            mysqli_connect("localhost", "habdulha", "Ix3Orduc", "habdulha");
-            if ($mysqli -> connect_error){
-                echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
-            }
-            $frm = $mysqli->prepare("INSERT INTO scoreboard(username, timeFinished") VALUES (?, ?);
-
-            $command = "SELECT username, timeFinished FROM scoreboard ORDER BY timeFinished";
-            $result = $mysqli->query($command);
-
-            $sql = "SELECT * FROM pics WHERE location='Ontario'";
-		$result = mysqli_query($conn, $command);
-		$rows = mysqli_num_rows($result);
-		if ($rows > 0) {
-			echo "<div id=\"card\">";
-			while ($row = mysqli_fetch_assoc($result)) {
-				$subject = $row["subject"];
-				$location = $row["location"];
-				$date = $row["date_taken"];
-				$url = $row["url"];
-				echo "<div id=\"image\">";
-				echo "<figure>";
-				echo "<img src=\"$url\" alt =\"$location\" style=\"width:100%; border-radius:50px;\">";
-				echo "<figcaption>$subject, $location, Taken on: $date</figcaption>";
-				echo "</figure>";
-				echo "</div>";
-			}
-			echo "<br>";
-			echo "</div>";
-		} else {
-			echo "0 results";
-		}
-
-            $result->close();
-
-            }
-            $mysqli->close();
-            ?>
 
     </body>
 </html>
