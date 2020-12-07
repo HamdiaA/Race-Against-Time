@@ -1,11 +1,36 @@
 html {
-    background: url(images/trnava-university-lab.jpg)  no-repeat center center fixed;
+    background: url("page11.png")  no-repeat center center fixed;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
+
+.button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #285ca5;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #4addff;
+  }
+  
+  .button:hover {
+      background-color: #4addff; 
+      box-shadow: #285ca5;}
+  
+  .button:active {
+    background-color:#4addff;
+    box-shadow: 0 5px #285ca5;
+    transform: translateY(4px);
+  }
 
 .briefcase{
     padding-top: 460px;
@@ -15,7 +40,7 @@ html {
 
 .briefcase:hover {
     transform:scale(3.25);
-    /*-webkit-box-shadow: 0px 0px 3px 5px #f2e1f2;
+    -webkit-box-shadow: 0px 0px 3px 5px #f2e1f2;
     -moz-box-shadow: 0px 0px 3px 5px #f2e1f2;
     box-shadow: 0px 0px 3px 5px #f2e1f2; 
 }
@@ -24,4 +49,33 @@ html {
     padding-top: 460px;
     margin-left: 400px;
     width:25%*/
+}
+.base-timer {
+  position: relative;
+  width: 10%;
+  float: right;
+  
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: #FFDEAD;
+}
+.base-timer__label {
+  position: absolute;
+  
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Nosifer", cursive;
+  font-size: 28px;
+  color: #FFF8DC;
 }

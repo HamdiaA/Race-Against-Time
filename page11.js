@@ -1,6 +1,6 @@
 /*function swapPic() {
-    var closed = "images/blackclosedcase.PNG";
-    var opened = "images/vaccinesuitcase.jpg";
+    var closed = "blackclosedcase.PNG";
+    var opened = "vaccinesuitcase.jpg";
 
     var imgElmnt = document.getElementById('swapPic');
 

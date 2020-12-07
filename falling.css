@@ -1,0 +1,141 @@
+* {
+  font: inherit;
+  box-sizing: border-box;
+}
+
+
+html {
+  background-image: url("page9.png");
+  background-repeat:no-repeat;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  background-position:center;
+
+}
+.info {
+	font-size: 20px;
+	font-family: "Xanh Mono", monospace;
+}
+.adjust{
+	margin-left:2%;
+}
+.base-timer {
+  position: relative;
+  width: 11%;
+  float: right;
+  
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: #FFDEAD;
+}
+.base-timer__label {
+  position: absolute;
+  
+  width: 100%;
+  top: 33%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Nosifer", cursive;
+  font-size: 28px;
+  color: #FFF8DC;
+}
+
+.game{
+  width:100%;
+  height:67%;
+  position: relative;
+  overflow: hidden;
+}
+
+.score{
+  font-family: "Nosifer", cursive;
+  font-size: 40px;
+  color: white;
+  width:100%;
+  text-align:center;
+}
+
+.box{
+  
+  position:absolute;
+  top: -30%;
+  transition: transform 1.5s linear;
+  cursor: pointer;
+}
+
+.move{
+   transform:translateY(120vh);
+}
+@media screen and (max-width: 768px){
+	.box{
+    margin-left: -10%;
+    }
+	.sus{
+		margin-left:40%;
+	}
+
+    .popup{
+      width: 70%;
+      margin-top:24%; /*MOVE HINT BOX TO MIDDLE OF PAGE*/
+    }
+    html{
+        width:70%;
+		background-size: 187% 100%;
+    }
+   .base-timer {
+		position: relative;
+		width: 20%;
+		left: 46%;
+		float: right;
+	}
+	.base-timer__label {
+		position: absolute;
+  
+		width: 30%;
+  
+		left: 35%;	
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		font-family: "Nosifer", cursive;
+		font-size: 11px;
+	}
+	.game{
+		height:60%;
+		
+	}
+	.info{
+		font-size:12px;
+	}
+	img{
+		width: 8%;
+		height: 8%;
+	}
+	.adjust{
+		width: 5%;
+		height:12%;
+	}
+	.score{
+		font-size:30px;
+		margin-left:25%;
+	}
+	.box{
+		left: 800px;
+	}
+}
+
+
