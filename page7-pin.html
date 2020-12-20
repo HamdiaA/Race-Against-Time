@@ -50,7 +50,7 @@
             el:document.getElementById("mainPinLogin"),
             loginEndpoint: "http://webdev.scs.ryerson.ca/~j29long/project/page7-login.php",// VALIDATION FOR PIN CODE
             // REDIRECTS TO THIS PAGE IF PIN IS VALID
-            redirectTo:"http://webdev.scs.ryerson.ca/~j29long/project/page10.html",  /*CHANGE THIS PAGE*/
+            redirectTo:"http://webdev.scs.ryerson.ca/~hhvu/detective.html",  /*CHANGE THIS PAGE*/
             maxNumbers: 3 /*MAX 3 number for pin*/
         }
     );
@@ -68,7 +68,7 @@
 <script type="text/javascript">
     //let timePassed=0;
     
-    var timePassed = parseInt(sessionStorage.getItem("timePassed"));
+    var timePassed = parseInt(sessionStorage.getItem('timePassed'));
     let timerInterval = null;
     document.getElementById("timer").innerHTML = `
     <div class="base-timer">

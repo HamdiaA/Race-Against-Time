@@ -4,7 +4,10 @@
 <title> hallway</title>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta charset="utf-8">
-<link href = "http://webdev.scs.ryerson.ca/~j29long/project/page6-hallway.css" rel="stylesheet">   <!-- Change css here-->
+
+<link href = "page6-hallway.css" rel="stylesheet">   
+
+<!-- <link href = "http://webdev.scs.ryerson.ca/~j29long/project/page6-hallway.css" rel="stylesheet">    -->
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
@@ -74,8 +77,8 @@
 
 <!--TIMER-->
 <script type="text/javascript">
-var timePassed=0;
-//var timePassed = parseInt(sessionStorage.getItem("timePassed"));
+//var timePassed=0;
+var timePassed = parseInt(sessionStorage.getItem('timePassed'));
 let timerInterval = null;
 document.getElementById("timer").innerHTML = `
 <div class="base-timer">

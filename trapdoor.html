@@ -66,7 +66,7 @@ function validateForm()
 <!--FORM FOR ACCEPTING VALUE-->
 <div class="answerBox">
     <!--REDIRECTS TO THIS PAGE IF ANSWER IS CORRECT-->
-<form name="myForm" action ="https://www.cs.ryerson.ca/~habdulha/CPS530/Project/page11.html" onsubmit="return validateForm()" method="post"> <!-- CHANGE PAGE DESTINATION-->
+<form name="myForm" action ="http://webdev.scs.ryerson.ca/~hhvu/page11.html" onsubmit="return validateForm()" method="post"> <!-- CHANGE PAGE DESTINATION-->
     <input type="text" name="answer" id="answer" placeholder="answer"> <br/> &nbsp;
     <div class="submitBox">
     <input class="button" type="submit" value="submit">
@@ -96,7 +96,7 @@ setTimeout(()=> {back.style.display= 'block';},50000); // change the timing for 
 <!--TIMER-->
 <script type="text/javascript">
  
-    var timePassed = parseInt(sessionStorage.getItem("timePassed"));
+    var timePassed = parseInt(sessionStorage.getItem('timePassed'));
     let timerInterval = null;
     document.getElementById("timer").innerHTML = `
     <div class="base-timer">
@@ -139,7 +139,7 @@ setTimeout(()=> {back.style.display= 'block';},50000); // change the timing for 
             function redirect()
             {
             sessionStorage.setItem("timePassed", timePassed);
-            window.location.href="http://webdev.scs.ryerson.ca/~j29long/project/page7-hallway.html";
+            window.location.href="http://webdev.scs.ryerson.ca/~hhvu/page11.html";
             }
             
     </script>
