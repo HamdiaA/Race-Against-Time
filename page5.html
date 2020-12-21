@@ -28,19 +28,19 @@
 		<div class="container">
     		<div class="row">
 	    		<div class="col-sm-4">
-	      			<a href="http://webdev.scs.ryerson.ca/~j29long/project/page6-hallway.html">
-						<img src="red.png" class="bin" alt="red storage bin">
-		  			</a>
+	      			
+						<img src="red.png" class="bin" alt="red storage bin" onclick="buttonclick()">
+		  			
 	    		</div>
 	    		<div class="col-sm-4">
-	    			<a href="page5trap.html">
-	      				<img src="blue.png" class="bin" alt="blue storage bin">
-	      			</a>
+	    			
+	      				<img src="blue.png" class="bin" alt="blue storage bin" onclick="buttonclick2()">
+	      			
 	    		</div>
 	    		<div class="col-sm-4">	
-	    			<a href="page5trap.html">
-	      				<img src="grey.png" class="bin" alt="grey storage bin">
-	      			</a>
+	    			
+	      				<img src="grey.png" class="bin" alt="grey storage bin" onclick="buttonclick2()">
+	      			
 	    		</div>
   			</div>
   
@@ -107,8 +107,14 @@ function formatTime(time) {
 
   return `${minutes}:${seconds}`;
 }
-
-sessionStorage.setItem("timePassed", timePassed);
+function buttonclick() {
+	 		sessionStorage.setItem("timePassed", timePassed);
+	 		location.href = "http://webdev.scs.ryerson.ca/~j29long/project/page6-hallway.html"
+		}
+function buttonclick2() {
+	 		sessionStorage.setItem("timePassed", timePassed);
+	 		location.href = "page5trap.html";
+		}
 </script>
 </body>
 </html>

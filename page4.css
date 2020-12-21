@@ -191,7 +191,7 @@ box{
   align-items: center;
   justify-content: center;
 
-  font-family: "Xanh Mono", cursive;
+  font-family: "Xanh Mono", monospace;
   font-size: 30px;
   color: #FFF8DC;
 }

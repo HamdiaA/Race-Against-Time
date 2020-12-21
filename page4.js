@@ -46,6 +46,7 @@ var tag = document.createElement('script');
 		function buttonclick() {
 	 		document.getElementById("nums").value++;
 	 		if (document.getElementById("nums").value == 40){
+	 				sessionStorage.setItem("timePassed", timePassed);
 	 				location.href = "page5.html";
 	 		}
 		}

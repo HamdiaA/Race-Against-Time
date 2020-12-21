@@ -10,3 +10,9 @@ function update(e) {
 
 		document.addEventListener('mousemove',update)
 		document.addEventListener('touchmove',update)
+
+
+function buttonclick() {
+	 		sessionStorage.setItem("timePassed", timePassed);
+	 		location.href = "page4.html"
+		}
