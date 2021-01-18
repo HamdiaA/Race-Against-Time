@@ -2,7 +2,7 @@
     $username = $_POST['name'];
 
     //Connecting to the Database
-    mysqli_connect("localhost", "habdulha", "Ix3Orduc", "habdulha");
+    mysqli_connect("localhost", "habdulha", "", "habdulha");
     if ($mysqli -> connect_error){
         echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
         // exit();
